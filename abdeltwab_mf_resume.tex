@@ -1,0 +1,218 @@
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% --- packages for Icon --- %
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+
+% -- clear all header and footer fields -- %
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% -- Adjust margins -- %
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% -- Sections formatting -- %
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% -- Ensure that generate pdf is machine readable/ATS parsable -- %
+\pdfgentounicode=1
+
+%% ----- Custom Commands Start ----- %%
+\newcommand{\Item}[2]{\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
+\newcommand{\SubItem}[2]{\Item{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\SubSecListBeg}{\begin{itemize}[leftmargin=*]}
+\newcommand{\SubSecListEnd}{\end{itemize}}
+
+\newcommand{\ItemListBeg}{\begin{itemize}}
+\newcommand{\ItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% -- Just in case someone needs a heading that does not need to be in a list -- %
+\newcommand{\rHead}[4] {
+	\begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\SubSecExperience}[4] {
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\SubSecEducation}[4] {
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\SubSecProject}[2] {
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\SubSubSecExperience}[2] {
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\LinksTable}[4] {
+	\begin{tabular}{lr}
+	#1 #2 \\
+	#3 #4 \\
+	\end{tabular}
+}
+
+%% ----- Custome Commands End ----- %%
+
+% ---- CV SECTIONS ---- %
+\begin{document}
+
+
+% ---- HEADING ---- %
+\textbf{\Huge Abd El-Twab M. Fakhry} \\
+
+\begin{minipage}[t]{0.10\textwidth}
+	\LinksTable
+	{\faIcon{location-arrow}} {Cairo, Egypt}
+	{\faIcon{mobile-alt}}     {(+20) 1127030951}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.20\textwidth}
+	\LinksTable
+	{\faIcon{envelope}} {abdeltwab.m.fakhry@gmail.com}
+	{\faIcon{linkedin}} {\href{https://www.linkedin.com/in/abdeltwabmf/}{linkedin.com/in/abdeltwabmf}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+	\LinksTable
+	{\faIcon{github}} {\href{https://github.com/AbdeltwabMF}{github.com/abdeltwabmf}}
+	{\faIcon{code}}   {\href{https://codeforces.com/profile/Abd-Et-Twab}{codeforces.com/profile/abd-et-twab}}
+\end{minipage}
+
+
+% ---- EDUCATION ---- %
+\section{Education}
+\SubSecListBeg
+	\SubSecEducation
+	{\faIcon{university} Faculty of Engineering, Al-Azhar University} {Cairo, Egypt}
+	{Bachelor in Computer Engineering}                                {Sep. 2017 -- Jun. 2022}
+\SubSecListEnd
+
+
+% ---- Competitive Programming ---- %
+\section{Programming Contests Activity}
+\SubSecListBeg
+	\SubItem
+	{$98^{th}$ Rank 2020 }
+	{in The Africa \& Arab Collegiate Programming Championship}
+	\SubItem
+	{$45^{th}$ Rank 2020 and $116^{th}$ Rank 2019 }
+	{in The Egyptian Collegiate Programming Contest}
+	\SubItem
+	{$2^{nd}$  Rank 2020 and $3^{rd}$   Rank 2019 }
+	{in The Al-Azhar University Collegiate Programming Contest}
+    	\SubItem
+      	{$4^{th}$  Rank 2020 and $4^{th}$   Rank 2019 }
+	{in IEEEXtreme 14.0 and 13.0}
+\SubSecListEnd
+
+
+% ---- EXPERIENCE ---- %
+\section{Experience}
+\SubSecListBeg
+	\SubSecExperience
+	{Al-Azhar ICPC Community}{Cairo, Egypt}
+	{Mentor and Problem-setter}{Feb. 2020 - Present}
+      	\ItemListBeg
+        	\Item{Writing Problems}
+        	{: writing certain number of problems for weekly sheets and contests.}
+		\Item{Training}
+		{: Providing Multi-Level Training during the year; Teaching the participants Algorithms topics and Data Structures such as sorting, searching, graph theory and dynamic programming, Supporting Participants technically during sessions and online.}
+      	\ItemListEnd
+	\SubSubSecExperience
+	{Logistician}{Feb. 2020 - Present}
+	\ItemListBeg
+        	\Item{Events}
+        	{: Managing and Booking every event.}
+        	\Item{Training}
+          	{: Providing and assure that all tools needed in training sessions are available (e.g. projector, white-board markers, etc…), as well as Providing yearly printed IDs and T-Shirts for all team members.}
+      	\ItemListEnd
+\SubSecListEnd
+
+
+% ---- PROJECTS ---- %
+\section{Projects}
+\SubSecListBeg
+	\SubSecProject
+	{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}
+	\ItemListBeg
+		\Item{}
+		{Implemented a software for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as a input, as well as the deterministic queues.}
+		\Item{Tools}
+		{: Python3, Tkinter(GUI Programming), matplotlib.}
+	\ItemListEnd
+
+	\SubSecProject
+	{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020}
+	\ItemListBeg
+		\Item{}
+		{Implemented an open source library for Common Code for Competitive Programming in C++ including Graph Theory, Dynamic Programming, Mathematics, Computational Geometry, String Processing, Data Structures and more advanced topics, which i've learned through my training.}
+		\Item{Tools}
+		{: C++}
+	\ItemListEnd
+\SubSecListEnd
+
+% ---- PROGRAMMING SKILLS ---- %
+\section{Programming Skills}
+\SubSecListBeg
+	\Item{Programming Languages}
+	{: C/C++, Python, Java, Matlab/GNU Octave, Bash/Shell, Emacs Lisp.}
+	\Item{Markup Languages}
+	{: \LaTeX, Markdown, HTML, XML, CSS.}
+	\Item{Technologies \& Tools}
+	{: Git, Gnu Debugger (gdb), Android Studio, Emacs, Linux.}
+\SubSecListEnd
+
+
+\end{document}
