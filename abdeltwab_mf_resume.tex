@@ -51,6 +51,7 @@
 \newcommand{\Item}[2]{\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
 \newcommand{\SubItem}[2]{\Item{#1}{#2}\vspace{-4pt}}
 
+\newcommand{\cItem}[2]{\item\small{\textbf{#1}{\textit{#2} \vspace{-2pt}}}}
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\SubSecListBeg}{\begin{itemize}[leftmargin=*]}
@@ -59,7 +60,7 @@
 \newcommand{\ItemListBeg}{\begin{itemize}}
 \newcommand{\ItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\subsecfour}[4] {
+\newcommand{\subsecfourtwoitalic}[4] {
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
@@ -67,13 +68,20 @@
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\subsubsecfour}[2] {
+\newcommand{\subsubsectwoitalic}[2] {
 	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
 		\textit{\small#1} & \textit{\small #2} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\subsectwo}[2] {
+\newcommand{\subsectwonormal}[2] {
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\subsectwooneitalic}[2] {
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & \textit{\small #2} \\
@@ -118,34 +126,51 @@
 % ---- EDUCATION ---- %
 \section{Education}
 \SubSecListBeg
-	\subsecfour
+	\subsecfourtwoitalic
 	{\faIcon{university} Faculty of Engineering, Al-Azhar University} {Cairo, Egypt}
 	{Bachelor in Computer Engineering}                                {Sep. 2017 -- Jun. 2022}
 \SubSecListEnd
 
-
 % ---- Competitive Programming ---- %
 \section{Programming Contests Activity}
 \SubSecListBeg
-	\SubItem
-	{$98^{th}$ Rank 2020 }
-	{in The Africa \& Arab Collegiate Programming Championship}
-	\SubItem
-	{$45^{th}$ Rank 2020 and $116^{th}$ Rank 2019 }
-	{in The Egyptian Collegiate Programming Contest}
-	\SubItem
-	{$2^{nd}$  Rank 2020 and $3^{rd}$   Rank 2019 }
-	{in The Al-Azhar University Collegiate Programming Contest}
-    	\SubItem
-      	{$4^{th}$  Rank 2020 and $4^{th}$   Rank 2019 }
-	{in IEEEXtreme 14.0 and 13.0}
+	\subsectwonormal
+	{The Africa \& Arab Collegiate Programming Championship}{Luxor, Egypt}
+	\ItemListBeg
+		\cItem
+		{2020}{: Ranked $98^{th}$}
+	\ItemListEnd
+	\subsectwonormal
+	{The Egyptian Collegiate Programming Contest}{Alexandria, Egypt}
+	\ItemListBeg
+		\cItem
+		{2020}{: Ranked $45^{th}$}
+		\cItem
+		{2019}{: Ranked $116^{th}$}
+	\ItemListEnd
+	\subsectwonormal
+	{The Al-Azhar University Collegiate Programming Contest}{Cairo, Egypt}
+	\ItemListBeg
+		\cItem
+		{2020}{: Ranked $2^{nd}$}
+		\cItem
+		{2019}{: Ranked $3^{rd}$}
+	\ItemListEnd
+	\subsectwonormal
+	{IEEEXtreme Competition}{Online}
+	\ItemListBeg
+		\cItem
+		{2020}{: Ranked $4^{th}$ on Egypt}
+		\cItem
+		{2019}{: Ranked $4^{th}$ on Egypt}
+	\ItemListEnd
 \SubSecListEnd
 
 
 % ---- EXPERIENCE ---- %
 \section{Experience}
 \SubSecListBeg
-	\subsecfour
+	\subsecfourtwoitalic
 	{Al-Azhar ICPC Community}{Cairo, Egypt}
 	{Mentor and Problem-setter}{Feb. 2020 - Present}
       	\ItemListBeg
@@ -154,7 +179,7 @@
 		\Item{Training}
 		{: Providing Multi-Level Training during the year; Teaching the participants Algorithms topics and Data Structures such as sorting, searching, graph theory and dynamic programming, Supporting Participants technically during sessions and online.}
       	\ItemListEnd
-	\subsubsecfour
+	\subsubsectwoitalic
 	{Logistician}{Feb. 2020 - Present}
 	\ItemListBeg
         	\Item{Events}
@@ -168,20 +193,18 @@
 % ---- PROJECTS ---- %
 \section{Projects}
 \SubSecListBeg
-	\subsectwo
+	\subsectwooneitalic
 	{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}
 	\ItemListBeg
-		\Item{}
-		{Implemented a software for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as a input, as well as the deterministic queues.}
+		\Item{}{Implemented a software for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as a input, as well as the deterministic queues.}
 		\Item{Tools}
 		{: Python3, Tkinter(GUI Programming), matplotlib.}
 	\ItemListEnd
 
-	\subsectwo
+	\subsectwooneitalic
 	{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020 -- Present}
 	\ItemListBeg
-		\Item{}
-		{Implemented an open source library for Common Code for Competitive Programming in C++ including Graph Theory, Dynamic Programming, Mathematics, Computational Geometry, String Processing, Data Structures and more advanced topics, which i've learned through my training.}
+		\Item{}{Implemented an open source library for Common Code for Competitive Programming in C++ including Graph Theory, Dynamic Programming, Mathematics, Computational Geometry, String Processing, Data Structures and more advanced topics, which i've learned through my training.}
 		\Item{Tools}
 		{: C++}
 	\ItemListEnd
@@ -190,12 +213,9 @@
 % ---- PROGRAMMING SKILLS ---- %
 \section{Programming Skills}
 \SubSecListBeg
-	\Item{Programming Languages}
-	{: C/C++, Python, Java, Matlab/GNU Octave, Bash/Shell, Emacs Lisp.}
-	\Item{Markup Languages}
-	{: \LaTeX, Markdown, HTML, CSS.}
-	\Item{Technologies \& Tools}
-	{: Linux, Git, GNU Debugger (gdb), Emacs.}
+	\Item{Programming Languages}{: C/C++, Python, Java, Matlab/GNU Octave, Bash/Shell, Emacs Lisp.}
+	\Item{Markup Languages}{: \LaTeX, Markdown, HTML, CSS.}
+	\Item{Technologies \& Tools}{: Linux, Git, GNU Debugger (gdb), Emacs.}
 \SubSecListEnd
 
 
