@@ -59,15 +59,7 @@
 \newcommand{\ItemListBeg}{\begin{itemize}}
 \newcommand{\ItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% -- Just in case someone needs a heading that does not need to be in a list -- %
-\newcommand{\rHead}[4] {
-	\begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
-	\end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\SubSecExperience}[4] {
+\newcommand{\subsecfour}[4] {
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
@@ -75,28 +67,20 @@
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\SubSecEducation}[4] {
-	\vspace{-1pt}\item
-	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
+\newcommand{\subsubsecfour}[2] {
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\SubSecProject}[2] {
+\newcommand{\subsectwo}[2] {
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & \textit{\small #2} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\SubSubSecExperience}[2] {
-	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\textit{\small#1} & \textit{\small #2} \\
-	\end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\LinksTable}[4] {
+\newcommand{\linktable}[4] {
 	\begin{tabular}{lr}
 	#1 #2 \\
 	#3 #4 \\
@@ -113,19 +97,19 @@
 \textbf{\Huge Abd El-Twab M. Fakhry} \\
 
 \begin{minipage}[t]{0.10\textwidth}
-	\LinksTable
+	\linktable
 	{\faIcon{location-arrow}} {Cairo, Egypt}
 	{\faIcon{mobile-alt}}     {(+20) 1127030951}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.20\textwidth}
-	\LinksTable
+	\linktable
 	{\faIcon{envelope}} {abdeltwab.m.fakhry@gmail.com}
 	{\faIcon{linkedin}} {\href{https://www.linkedin.com/in/abdeltwabmf/}{linkedin.com/in/abdeltwabmf}}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.35\textwidth}
-	\LinksTable
+	\linktable
 	{\faIcon{github}} {\href{https://github.com/AbdeltwabMF}{github.com/abdeltwabmf}}
 	{\faIcon{code}}   {\href{https://codeforces.com/profile/Abd-Et-Twab}{codeforces.com/profile/abd-et-twab}}
 \end{minipage}
@@ -134,7 +118,7 @@
 % ---- EDUCATION ---- %
 \section{Education}
 \SubSecListBeg
-	\SubSecEducation
+	\subsecfour
 	{\faIcon{university} Faculty of Engineering, Al-Azhar University} {Cairo, Egypt}
 	{Bachelor in Computer Engineering}                                {Sep. 2017 -- Jun. 2022}
 \SubSecListEnd
@@ -161,7 +145,7 @@
 % ---- EXPERIENCE ---- %
 \section{Experience}
 \SubSecListBeg
-	\SubSecExperience
+	\subsecfour
 	{Al-Azhar ICPC Community}{Cairo, Egypt}
 	{Mentor and Problem-setter}{Feb. 2020 - Present}
       	\ItemListBeg
@@ -170,7 +154,7 @@
 		\Item{Training}
 		{: Providing Multi-Level Training during the year; Teaching the participants Algorithms topics and Data Structures such as sorting, searching, graph theory and dynamic programming, Supporting Participants technically during sessions and online.}
       	\ItemListEnd
-	\SubSubSecExperience
+	\subsubsecfour
 	{Logistician}{Feb. 2020 - Present}
 	\ItemListBeg
         	\Item{Events}
@@ -184,7 +168,7 @@
 % ---- PROJECTS ---- %
 \section{Projects}
 \SubSecListBeg
-	\SubSecProject
+	\subsectwo
 	{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}
 	\ItemListBeg
 		\Item{}
@@ -193,7 +177,7 @@
 		{: Python3, Tkinter(GUI Programming), matplotlib.}
 	\ItemListEnd
 
-	\SubSecProject
+	\subsectwo
 	{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020 -- Present}
 	\ItemListBeg
 		\Item{}
