@@ -4,7 +4,6 @@
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames, dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -35,188 +34,127 @@
 
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+\raggedbottom\raggedright\setlength{\tabcolsep}{0in}
 
 % -- Sections formatting -- %
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % -- Ensure that generate pdf is machine readable/ATS parsable -- %
 \pdfgentounicode=1
 
 %% ----- Custom Commands Start ----- %%
-\newcommand{\Item}[2]{\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
-\newcommand{\SubItem}[2]{\Item{#1}{#2}\vspace{-4pt}}
-
-\newcommand{\cItem}[2]{\item\small{\textbf{#1}{\textit{#2} \vspace{-2pt}}}}
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\SubSecListBeg}{\begin{itemize}[leftmargin=*]}
-\newcommand{\SubSecListEnd}{\end{itemize}}
-
-\newcommand{\ItemListBeg}{\begin{itemize}}
-\newcommand{\ItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-\newcommand{\subsecfourtwoitalic}[4] {
-	\vspace{-1pt}\item
-	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
-	\end{tabular*}\vspace{-5pt}
+\newcommand{\infoItem}[3] {
+  \begin{tabular}{lr}
+    {\color{#1}\faIcon{#2} {#3}}
+  \end{tabular}
 }
 
-\newcommand{\subsubsectwoitalic}[2] {
-	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\textit{\small#1} & \textit{\small #2} \\
-	\end{tabular*}\vspace{-5pt}
+\newcommand{\educationItem}[4] {
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\subsectwonormal}[2] {
-	\vspace{-1pt}\item
-	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-	\end{tabular*}\vspace{-5pt}
+\newcommand{\progContItem}[1] {\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\experienceItem}[4] {
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\subsectwooneitalic}[2] {
-	\vspace{-1pt}\item
-	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & \textit{\small #2} \\
-	\end{tabular*}\vspace{-5pt}
+\newcommand{\experienceSubItem}[2] {\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
+
+\newcommand{\projectItem}[2] {
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\linktable}[4] {
-	\begin{tabular}{lr}
-	#1 #2 \\
-	#3 #4 \\
-	\end{tabular}
-}
+\newcommand{\projectSubItem}[1] {\item\small{#1 \vspace{-2pt}}}
 
+\newcommand{\techSkillItem}[2] {\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
 %% ----- Custome Commands End ----- %%
 
 % ---- CV SECTIONS ---- %
 \begin{document}
 
-
 % ---- HEADING ---- %
-\textbf{\Huge Abd El-Twab M. Fakhry} \\
+\href{www.twitter.com/AbdeltwabMF}{\textbf{{\Huge Abd El-Twab M. Fakhry}}} \\[2pt]
 
-\begin{minipage}[t]{0.10\textwidth}
-	\linktable
-	{\faIcon{location-arrow}} {Cairo, Egypt}
-	{\faIcon{mobile-alt}}     {(+20) 1127030951}
+\begin{minipage}[t]{0.155\textwidth}
+  \infoItem{RedViolet}{location-arrow}{Cairo, Egypt}
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.20\textwidth}
-	\linktable
-	{\faIcon{envelope}} {abdeltwab.m.fakhry@protonmail.com}
-	{\faIcon{linkedin}} {\href{https://www.linkedin.com/in/abdeltwabmf/}{linkedin.com/in/abdeltwabmf}}
+\begin{minipage}[t]{0.295\textwidth}
+  \infoItem{RoyalPurple}{envelope}{\href{mailto:abdeltwab.m.fakhry@protonmail.com}{abdeltwab.m.fakhry@pm.me}}
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.35\textwidth}
-	\linktable
-	{\faIcon{github}} {\href{https://github.com/AbdeltwabMF}{github.com/abdeltwabmf}}
-	{\faIcon{code}}   {\href{https://codeforces.com/profile/Abd-Et-Twab}{codeforces.com/profile/abd-et-twab}}
+\begin{minipage}[t]{0.19\textwidth}
+  \infoItem{JungleGreen}{mobile-alt}{\href{tel:+201127030951}{(+20) 1127030951}}
+\end{minipage}
+\begin{minipage}[t]{0.165\textwidth}
+  \infoItem{RoyalBlue}{linkedin}{\href{https://www.linkedin.com/in/abdeltwabmf/}{AbdeltwabMF}}
+\end{minipage}
+\begin{minipage}[t]{0.165\textwidth}
+  \infoItem{Black}{github}{\href{https://github.com/AbdeltwabMF}{AbdeltwabMF}}
 \end{minipage}
 
-
-% ---- EDUCATION ---- %
+% ---- Education ---- %
 \section{Education}
-\SubSecListBeg
-	\subsecfourtwoitalic
-	{\faIcon{university} Faculty of Engineering, Al-Azhar University} {Cairo, Egypt}
-	{Bachelor in Computer Engineering}                                {Sep. 2017 -- Jun. 2022}
-\SubSecListEnd
+\begin{itemize}[leftmargin=*]
+  \educationItem{\faIcon{university} Faculty of Engineering, Al-Azhar University}{Cairo, Egypt}{Bachelor in Computer Engineering}{Sep. 2017 $-$ Jun. 2022}
+\end{itemize}
 
 % ---- Competitive Programming ---- %
 \section{Programming Contests Activity}
-\SubSecListBeg
-	\subsectwonormal
-	{The Africa \& Arab Collegiate Programming Championship}{Luxor, Egypt}
-	\ItemListBeg
-		\cItem
-		{2020}{: Ranked $98^{th}$}
-	\ItemListEnd
-	\subsectwonormal
-	{The Egyptian Collegiate Programming Contest}{Alexandria, Egypt}
-	\ItemListBeg
-		\cItem
-		{2020}{: Ranked $45^{th}$}
-		\cItem
-		{2019}{: Ranked $116^{th}$}
-	\ItemListEnd
-	\subsectwonormal
-	{The Al-Azhar University Collegiate Programming Contest}{Cairo, Egypt}
-	\ItemListBeg
-		\cItem
-		{2020}{: Ranked $2^{nd}$}
-		\cItem
-		{2019}{: Ranked $3^{rd}$}
-	\ItemListEnd
-	\subsectwonormal
-	{IEEEXtreme Competition}{Online}
-	\ItemListBeg
-		\cItem
-		{2020}{: Ranked $4^{th}$ on Egypt}
-		\cItem
-		{2019}{: Ranked $4^{th}$ on Egypt}
-	\ItemListEnd
-\SubSecListEnd
-
+\begin{itemize}[leftmargin=*]
+  \progContItem{Solved +1000 algorithmic challenges on different online judges.}
+  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{Finalist at \emph{Africa \& Arab Collegiate Programming Championship} (2020).}}
+  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{Finalist twice at \emph{Egyption Collegiate Programming Contest} (2019, 2020).}}
+  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{3rd and 2nd palce at \emph{Al-Azhar Collegiate Programming Contest} (2019, 2020).}}
+\end{itemize}
 
 % ---- Experience and Volunteering ---- %
 \section{Experience \& Volunteering}
-\SubSecListBeg
-	\subsecfourtwoitalic
-	{Al-Azhar ICPC Community}{Cairo, Egypt}
-	{Mentor and Problem-setter}{Feb. 2020 - Present}
-      	\ItemListBeg
-        	\Item{Writing Problems}
-        	{: writing certain number of problems for weekly sheets and contests.}
-		\Item{Training}
-		{: Providing Multi-Level Training during the year; Teaching the participants Algorithms topics and Data Structures such as sorting, searching, graph theory and dynamic programming, Supporting Participants technically during sessions and online.}
-      	\ItemListEnd
-	\subsubsectwoitalic
-	{Logistics Specialist}{Feb. 2020 - Present}
-	\ItemListBeg
-        	\Item{Events}
-        	{: Managing and Booking every event.}
-        	\Item{Training}
-          	{: Providing and assure that all tools needed in training sessions are available (e.g. projector, white-board markers, etc…), as well as Providing yearly printed IDs and T-Shirts for all team members.}
-      	\ItemListEnd
-\SubSecListEnd
-
+\begin{itemize}[leftmargin=*]
+  \experienceItem{Al-Azhar ICPC Community}{Cairo, Egypt}{Mentor and Problem-setter}{Feb. 2020 $-$ Present}
+  \begin{itemize}
+    \experienceSubItem{Teaching}{ Participants Algorithms topics, Data structures and Problem solving paradigms.}
+    \experienceSubItem{Providing Multi-Level Training}{ during the year.}
+    \experienceSubItem{Writing Problems}{ for weekly sheets and contests.}
+    \experienceSubItem{Supporting}{ Participants technically during sessions and online.}
+  \end{itemize}\vspace{-5pt}
+\end{itemize}
 
 % ---- PROJECTS ---- %
-\section{Projects}
-\SubSecListBeg
-	\subsectwooneitalic
-	{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}
-	\ItemListBeg
-		\Item{}{Implemented a software for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as a input, as well as the deterministic queues.}
-		\Item{Tools}
-		{: Python3, Tkinter(GUI Programming), matplotlib.}
-	\ItemListEnd
+\section{Selected Projects}
+\begin{itemize}[leftmargin=*]
+  \projectItem{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}
+  \begin{itemize}
+    \projectSubItem{Implemented a software for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as an input.}
+    \projectSubItem{Implemented a deterministic queue model using prefix sum technique, helped to know the characteristics of the queue at any point of time.}
+    \projectSubItem{Tools: Python3, Tkinter (GUI Programming).}
+  \end{itemize}\vspace{-5pt}
 
-	\subsectwooneitalic
-	{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020 -- Present}
-	\ItemListBeg
-		\Item{}{Implemented an open source library for Common Code for Competitive Programming in C++ including Graph Theory, Dynamic Programming, Mathematics, Computational Geometry, String Processing, Data Structures and more advanced topics, which i've learned through my training.}
-		\Item{Tools}
-		{: C++}
-	\ItemListEnd
-\SubSecListEnd
+  \projectItem{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020 $-$ Present}
+  \begin{itemize} 
+    \projectSubItem{Implemented an open source library for Common Code for Competitive Programming in C++.}
+    \projectSubItem{Included Graph Theory, Problem Solving Paradigms, Mathematics, Computational Geometry, Game Theory, String Processing, Data Structures, more advanced topics and some helpful tools.}
+    \projectSubItem{Tools: C++, Bash.}
+  \end{itemize}\vspace{-5pt}
+\end{itemize}
 
-% ---- PROGRAMMING SKILLS ---- %
-\section{Programming Skills}
-\SubSecListBeg
-	\Item{Programming Languages}{: C/C++, Python, Java, Matlab/GNU Octave, SQL, Bash/Shell, Emacs Lisp.}
-	\Item{Markup Languages}{: \LaTeX, Markdown, HTML, CSS.}
-	\Item{Technologies \& Tools}{: Linux, Git, GNU Debugger (gdb), Emacs, Docker.}
-\SubSecListEnd
-
+% ---- Technical Skills ---- %
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*]
+  \techSkillItem{Programming Languages}{: C/C++, Python, Java (SE, FX), SQL, \LaTeX{}, Bash/Shell.}
+  \techSkillItem{Tools \& Technologies}{: Linux OS, Git, GNU Debugger, Emacs, Vim, Docker, SQLite.}
+\end{itemize}
 
 \end{document}
