@@ -43,8 +43,6 @@
 \pdfgentounicode=1
 
 %% ----- Custom Commands Start ----- %%
-\renewcommand{\labelitemii}{$\circ$}
-
 \newcommand{\infoItem}[3] {
   \begin{tabular}{lr}
     {\color{#1}\faIcon{#2} {#3}}
@@ -81,6 +79,8 @@
 \newcommand{\projectSubItem}[1] {\item\small{#1 \vspace{-2pt}}}
 
 \newcommand{\techSkillItem}[2] {\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
+
+\renewcommand{\labelitemii}{$\circ$}
 %% ----- Custome Commands End ----- %%
 
 % ---- CV SECTIONS ---- %
