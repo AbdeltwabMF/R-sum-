@@ -69,10 +69,10 @@
 
 \newcommand{\experienceSubItem}[2] {\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
 
-\newcommand{\projectItem}[2] {
+\newcommand{\projectItem}[3] {
   \vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textit{\small #2} \\
+  \begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#3} & \textit{\small #2} \\
   \end{tabular*}\vspace{-5pt}
 }
 
@@ -87,7 +87,9 @@
 \begin{document}
 
 % ---- HEADING ---- %
-\textbf{\href{https://twitter.com/AbdeltwabMF}{\Huge{Abd El-Twab M. Fakhry}}} \\[2pt]
+% \textbf{\href{https://twitter.com/AbdeltwabMF}{\Huge{Abd El-Twab M. Fakhry}}} \\[2pt]
+
+\textbf{\href{http://abdeltwabmf.me}{\Huge{Abd El-Twab M. Fakhry}}} \\[2pt]
 
 \begin{minipage}[t]{0.150\textwidth}
   \infoItem{RedViolet}{location-arrow}{Cairo, Egypt}
@@ -108,7 +110,7 @@
 % ---- Education ---- %
 \section{Education}
 \begin{itemize}[leftmargin=*]
-  \educationItem{\faIcon{university} Faculty of Engineering, Al-Azhar University}{ Cairo, Egypt}{ Bachelor in Computer Engineering}{ Sep. 2017 $-$ Jun. 2022}
+  \educationItem{\faIcon{university} Faculty of Engineering, Al-Azhar University}{ Cairo, Egypt}{ Bachelor in Computers and Systems Engineering}{ Sep. 2017 $-$ Jun. 2022}
 \end{itemize}
 
 % ---- Competitive Programming ---- %
@@ -116,8 +118,8 @@
 \begin{itemize}[leftmargin=*]
   \progContItem{Solved +1000 algorithmic challenges on different online judges.}
   \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{Finalist at \emph{Africa \& Arab Collegiate Programming Championship} (2020).}}
-  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{Finalist twice at \emph{Egyption Collegiate Programming Contest} (2019, 2020).}}
-  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{3rd and 2nd palce at \emph{Al-Azhar Collegiate Programming Contest} (2019, 2020).}}
+  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{Finalist thrice at \emph{Egyption Collegiate Programming Contest} (2019, 2020, 2021).}}
+  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{3rd, 2nd, and 3rd palce at \emph{Al-Azhar Collegiate Programming Contest} (2019, 2020, 2021).}}
 \end{itemize}
 
 % ---- Experience and Volunteering ---- %
@@ -135,34 +137,39 @@
 % ---- PROJECTS ---- %
 \section{Selected Projects}
 \begin{itemize}[leftmargin=*]
-  \projectItem{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}
+  \projectItem{\faIcon{cloud} \href{https://devault.vercel.com}{Decentralized Vault}}{Jun. 2022 $-$ Present}{ | Next.js - Hardhat - Ethers.js - Docker}
+  \begin{itemize}
+    \projectSubItem{Implementing an upgrade-able smart contracts for storing users' files metadata.}
+    \projectSubItem{Developing a SPA using Next.js for static site rendering (SSR).}
+    \projectSubItem{Using the IPFS p2p network for storing users' files after being encrypted in a decentralized way.}
+    \projectSubItem{Using client-side encryption/decryption method for more confidentiality and privacy.}
+  \end{itemize}
+
+  \projectItem{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}{ | Python - Tkinter (GUI)}
   \begin{itemize}
     \projectSubItem{Implemented a software for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as an input.}
     \projectSubItem{Implemented a deterministic queue model using prefix sum technique, helped to know the characteristics of the queue at any point of time.}
-    \projectSubItem{Tools: Python, Tkinter (GUI Programming).}
   \end{itemize}\vspace{-5pt}
 
-  \projectItem{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020 $-$ Present}
+  \projectItem{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020 $-$ Present}{ | C++ - Bash/Shell}
   \begin{itemize}
     \projectSubItem{Implementing an open source library for Common Code for Competitive Programming in C++.}
     \projectSubItem{Including Graph Theory, Problem-Solving Paradigms, Mathematics, Computational Geometry, Game Theory, String Processing, Data Structures, more advanced topics and some helpful tools.}
-    \projectSubItem{Tools: C++.}
   \end{itemize}\vspace{-5pt}
 
-  \projectItem{\faIcon{mosque} \href{https://github.com/AbdeltwabMF/nxprayer}{Next Prayer}}{Sep. 2021 $-$ Present}
+  \projectItem{\faIcon{mosque} \href{https://github.com/AbdeltwabMF/nxprayer}{Next Prayer}}{Sep. 2021 $-$ Present}{ | C++ - Python - Bash/Shell - Roff - Docker}
   \begin{itemize}
-    \projectSubItem{Implementing a prayer reminder for Linux status bars.}
-    \projectSubItem{Using config file for setting the location to make \emph{1 remote API / 6 years}.}
-    \projectSubItem{Maintaining an AUR package for it.}
-    \projectSubItem{Tools: C++, Bash, Python, Roff, Makefile.}
+    \projectSubItem{Implementing an Islamic prayers reminder and Hijri date for *nix status bars.}
+    \projectSubItem{Maintaining a Docker image for non unix users.}
+    \projectSubItem{Maintaining an AUR package for Arch users.}
   \end{itemize}\vspace{-5pt}
 \end{itemize}
 
 % ---- Technical Skills ---- %
 \section{Technical Skills}
 \begin{itemize}[leftmargin=*]
-  \techSkillItem{Programming Languages}{: C/C++, Python, Java (SE), SQL, \LaTeX{}, Bash/Shell.}
-  \techSkillItem{Tools \& Technologies}{: GNU/Linux, Git, GNU Debugger, Emacs, Vim, SQLite.}
+  \techSkillItem{Programming Languages}{: C/C++, Python, Java, SQL, \LaTeX{}, Bash/Shell, Solidity, JavaScript, HTML/CSS.}
+  \techSkillItem{Tools \& Technologies}{: GNU/Linux, Git, Make, Emacs, Vim, Next.js, PostgreSQL, Prisma, Hardhat, Ethers.js, Docker, CI/CD.}
 \end{itemize}
 
 \end{document}
