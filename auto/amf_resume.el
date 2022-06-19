@@ -32,13 +32,15 @@
     "tikz"
     "fontawesome5")
    (TeX-add-symbols
-    '("techSkillItem" 2)
-    '("projectSubItem" 1)
-    '("projectItem" 3)
-    '("experienceSubItem" 2)
-    '("experienceItem" 4)
-    '("progContItem" 1)
-    '("educationItem" 4)
-    '("infoItem" 3)))
+    '("contact" 4)
+    '("name" 2)
+    '("subtechnicalskill" 1)
+    '("technicalskill" 2)
+    '("subproject" 1)
+    '("project" 6)
+    '("subexperience" 1)
+    '("experience" 7)
+    '("extracurricularactivity" 5)
+    '("education" 5)))
  :latex)
 

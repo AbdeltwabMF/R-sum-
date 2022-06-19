@@ -43,42 +43,81 @@
 \pdfgentounicode=1
 
 %% ----- Custom Commands Start ----- %%
-\newcommand{\infoItem}[3] {
-  \begin{tabular}{lr}
-    {\color{#1}\faIcon{#2} {#3}}
-  \end{tabular}
-}
-
-\newcommand{\educationItem}[4] {
+\newcommand{\education}[5] {
   \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small #3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-5pt}
+    #1 \textbf{#2} & #3 \\
+    \textit{\small #4} & \textit{\small #5} \\
+  \end{tabular*}
+  \vspace{-4pt}
 }
 
-\newcommand{\progContItem}[1] {\item\small{#1 \vspace{-2pt}}}
+\newcommand{\extracurricularactivity}[5] {
+\item\small
+  {#1}
+  \href{#2}{\color{RoyalBlue}#3}
+  \href{#4}{\color{Cyan}#5}
+  \vspace{-4pt}
+}
 
-\newcommand{\experienceItem}[4] {
+\newcommand{\experience}[7] {
   \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small #3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-5pt}
+    #1 \textbf{#2} \href{#4}{\color{RoyalBlue}#5} & #3 \\
+    \textit{\small #6} & \textit{\small #7} \\
+  \end{tabular*}
+  \vspace{-8pt}
 }
 
-\newcommand{\experienceSubItem}[2] {\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
+\newcommand{\subexperience}[1] {
+\item\small
+  {#1}
+  \vspace{-2pt}
+}
 
-\newcommand{\projectItem}[3] {
+\newcommand{\project}[6] {
   \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textit{#3} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-5pt}
+    #1 \href{#4}{\textbf{\color{RoyalBlue}#2}} \textbar{ } & \textit{#5} & \textit{\small #3} \\
+    \vspace{-10pt}
+  \end{tabular*}
+  \textit{\small #6}
+  \vspace{-8pt}
 }
 
-\newcommand{\projectSubItem}[1] {\item\small{#1 \vspace{-2pt}}}
+\newcommand{\subproject}[1] {
+\item\small
+  {#1}
+  \vspace{-2pt}
+}
 
-\newcommand{\techSkillItem}[2] {\item\small{\textbf{#1}{#2 \vspace{-2pt}}}}
+\newcommand{\technicalskill}[2] {
+  \vspace{-1pt}
+\item\small
+  #1 \textbf{#2}
+  \vspace{-2pt}
+}
+
+\newcommand{\subtechnicalskill}[1] {
+  \vspace{4pt}
+  \small
+  #1
+  \vspace{-4pt}
+}
+
+\newcommand{\name}[2] {
+  \textbf{
+    \href{#1}{\Huge{#2}}
+  }
+  \vspace{-8pt}
+}
+
+\newcommand{\contact}[4] {
+  \begin{tabular}{lr}
+    {\href{#1}{\color{#3} #2 #4}}
+  \end{tabular}
+  \vspace{-4pt}
+}
 
 \renewcommand{\labelitemii}{$\circ$}
 %% ----- Custome Commands End ----- %%
@@ -87,89 +126,173 @@
 \begin{document}
 
 % ---- HEADING ---- %
-% \textbf{\href{https://twitter.com/AbdeltwabMF}{\Huge{Abd El-Twab M. Fakhry}}} \\[2pt]
+\name{http://abdeltwabmf.me}{Abd El-Twab M. Fakhry}
 
-\textbf{\href{http://abdeltwabmf.me}{\Huge{Abd El-Twab M. Fakhry}}} \\[2pt]
-
-\begin{minipage}[t]{0.150\textwidth}
-  \infoItem{RedViolet}{location-arrow}{Cairo, Egypt}
-\end{minipage}
-\begin{minipage}[t]{0.32\textwidth}
-  \infoItem{RoyalPurple}{envelope}{\href{mailto:abdeltwab.m.fakhry@gmail.com}{abdeltwab.m.fakhry@gmail.com}}
-\end{minipage}
-\begin{minipage}[t]{0.185\textwidth}
-  \infoItem{JungleGreen}{mobile-alt}{\href{tel:+201127030951}{(+20) 1127030951}}
-\end{minipage}
-\begin{minipage}[t]{0.16\textwidth}
-  \infoItem{RoyalBlue}{linkedin}{\href{https://www.linkedin.com/in/abdeltwabmf/}{AbdeltwabMF}}
-\end{minipage}
-\begin{minipage}[t]{0.147\textwidth}
-  \infoItem{Black}{github}{\href{https://github.com/AbdeltwabMF}{AbdeltwabMF}}
-\end{minipage}
+\begin{center}
+  \small
+  \contact
+  {https://abdeltwabmf.github.io}
+  {\faIcon{globe}}
+  {RoyalBlue}
+  {abdeltwabmf.me}\,
+  \contact
+  {https://www.linkedin.com/in/abdeltwabmf}
+  {\faIcon{linkedin}}
+  {RoyalBlue}
+  {AbdeltwabMF}\,
+  \contact
+  {https://github.com/AbdeltwabMF}
+  {\faIcon{github}}
+  {RoyalBlue}
+  {AbdeltwabMF}\,
+  \contact
+  {mailto:abdeltwab.m.fakhry@gmail.com}
+  {\faIcon{envelope}}
+  {RoyalBlue}
+  {abdeltwab.m.fakhry@gmail.com}\,
+  \contact
+  {tel:+201127030951}
+  {\faIcon{mobile-alt}}
+  {RoyalBlue}
+  {(+20) 1127030951}
+\end{center}\vspace{8pt}
 
 % ---- Education ---- %
 \section{Education}
 \begin{itemize}[leftmargin=*]
-  \educationItem{\faIcon{university} Faculty of Engineering, Al-Azhar University}{ Cairo, Egypt}{ Bachelor in Computers and Systems Engineering}{ Sep. 2017 $-$ Jun. 2022}
+  \education
+  {\faIcon{university}}
+  {Faculty of Engineering, Al-Azhar University}{ Cairo, Egypt}
+  {Bachelor in Computers and Systems Engineering}{ Sep. 2017 $-$ Jun. 2022}
 \end{itemize}
 
 % ---- Competitive Programming ---- %
-\section{Programming Contests Activity}
+\section{Extra-curricular Activities}
 \begin{itemize}[leftmargin=*]
-  \progContItem{Solved +1000 algorithmic challenges on different online judges.}
-  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{Finalist at \emph{Africa \& Arab Collegiate Programming Championship} (2020).}}
-  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{Finalist thrice at \emph{Egyption Collegiate Programming Contest} (2019, 2020, 2021).}}
-  \progContItem{\href{https://icpc.global/ICPCID/S6R4YNB7PW7D}{3rd, 2nd, and 3rd palce at \emph{Al-Azhar Collegiate Programming Contest} (2019, 2020, 2021).}}
+  \extracurricularactivity
+  {Finalist at Africa \& Arab Collegiate Programming Championship (2020).}
+  {https://icpc.global/ICPCID/S6R4YNB7PW7D}{\faIcon{id-badge}} {https://drive.google.com/drive/folders/1u0_mdcJPAfc0o91xwnp9Y6JB8VDaY82e?usp=sharing}{\faIcon{certificate}}
+
+  \extracurricularactivity
+  {2x Finalist at Egyption Collegiate Programming Contest (2019, 2020).}
+  {https://icpc.global/ICPCID/S6R4YNB7PW7D}{\faIcon{id-badge}}  {https://drive.google.com/drive/folders/1sjyZmHKeBmR2DB61ZGpJkiW17wtIWQ4q?usp=sharing}{\faIcon{certificate}}
+
+  \extracurricularactivity
+  {3rd \& 2nd palce at Al-Azhar Collegiate Programming Contest (2019, 2020).}
+  {https://icpc.global/ICPCID/S6R4YNB7PW7D}{\faIcon{id-badge}} {https://drive.google.com/drive/folders/18H79Bq42ARKxvx-H1pANSZgdD57EJMYF?usp=sharing}{\faIcon{certificate}}
+
+  \extracurricularactivity
+  {Teaching algorithmic topics, data structures, and problem-solving paradigms to +50 participants.} {https://docs.google.com/spreadsheets/d/1R45cqOVmXtc5L4Yh_wRvfuuHjtpenvdLYdwWA-JtjEw/edit\#gid=47417602}{\faIcon{link}} {https://docs.google.com/spreadsheets/d/1IMu0WK4eBeef63vYCsfZqlcPjnGqCN9LHRDWCemmdLs/edit\#gid=47417602}{\faIcon{link}}
+
+  \extracurricularactivity
+  {Providing Multi-level training during the year and writing problems for weekly sheets and contests.} {https://docs.google.com/spreadsheets/d/1R45cqOVmXtc5L4Yh_wRvfuuHjtpenvdLYdwWA-JtjEw/edit\#gid=1894627066}{\faIcon{link}} {https://docs.google.com/spreadsheets/d/1IMu0WK4eBeef63vYCsfZqlcPjnGqCN9LHRDWCemmdLs/edit\#gid=1894627066}{\faIcon{link}}
+
+  \extracurricularactivity
+  {Solved +1000 algorithmic challenges on different online judges.}
+  {https://atcoder.jp/users/AbdeltwabMF}{\faIcon{link}}
+  {https://codeforces.com/profile/Satoshi-Nakamoto}{\faIcon{link}}
 \end{itemize}
 
 % ---- Experience and Volunteering ---- %
-\section{Experience \& Volunteering}
-\begin{itemize}[leftmargin=*]
-  \experienceItem{\faIcon{code} \href{https://sites.google.com/view/azharicpc/home}{Al-Azhar ICPC Community}}{Cairo, Egypt}{Mentor and Problem-setter}{Feb. 2020 $-$ Present}
-  \begin{itemize}
-    \experienceSubItem{Teaching}{ Participants Algorithms topics, Data structures and Problem-solving paradigms.}
-    \experienceSubItem{Providing Multi-Level Training}{ during the year.}
-    \experienceSubItem{Writing Problems}{ for weekly sheets and contests.}
-    \experienceSubItem{Supporting}{ Participants technically during sessions and online.}
-  \end{itemize}\vspace{-5pt}
-\end{itemize}
+% \section{Experience \& Volunteering}
+% \begin{itemize}[leftmargin=*]
+%   \experience
+%   {\faIcon{code}}
+%   {Al-Azhar ICPC Community}{Cairo, Egypt}
+%   {https://sites.google.com/view/azharicpc/home}{{\faIcon{link}}}
+%   {Mentor and Problem-setter}{Feb. 2020 $-$ Present}
+
+%   \begin{itemize}
+%     \subexperience
+%     {Providing Multi-level training during the year and writing problems for weekly sheets and contests.}
+%     \subexperience
+%     {Teaching algorithmic topics, data structures, and problem-solving paradigms to +50 participants.}
+%   \end{itemize}\vspace{-4pt}
+% \end{itemize}
 
 % ---- PROJECTS ---- %
 \section{Selected Projects}
 \begin{itemize}[leftmargin=*]
-  \projectItem{\faIcon{cloud} \href{https://devault.vercel.com}{Decentralized Vault}}{Jun. 2022 $-$ Present}{ | Next.js - Hardhat - Ethers.js - Docker}
-  \begin{itemize}
-    \projectSubItem{Implementing an upgrade-able smart contracts for storing users' files metadata.}
-    \projectSubItem{Developing a SPA using Next.js for static site rendering (SSR).}
-    \projectSubItem{Using the IPFS p2p network for storing users' files after being encrypted in a decentralized way.}
-    \projectSubItem{Using client-side encryption/decryption method for more confidentiality and privacy.}
-  \end{itemize}
+  \project
+  {\faIcon{cloud}}
+  {Decentralized Vault}{Jun. 2022 $-$ Present}
+  {https://devault.vercel.app/}{Next.js - Hardhat - Ethers.js - Docker}
+  {Blockchain-based, self-hosted, decentralized, and encrypted cloud storage system.}
 
-  \projectItem{\faIcon{user-clock} \href{https://github.com/AbdeltwabMF/Queueing-ModelSim}{Queueing ModelSim}}{Dec. 2020}{ | Python - Tkinter (GUI)}
   \begin{itemize}
-    \projectSubItem{Implemented a software for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as an input.}
-    \projectSubItem{Implemented a deterministic queue model using prefix sum technique, helped to know the characteristics of the queue at any point of time.}
-  \end{itemize}\vspace{-5pt}
+    \subproject
+    {Implementing upgrade-able smart contracts for storing users' files metadata using the proxy pattern.}
+    \subproject
+    {Developing a single-page application (SPA) using Next.js for static-site rendering (SSR).}
+    \subproject
+    {Using the IPFS p2p network for storing users' files after being encrypted.}
+    \subproject
+    {Using client-side encryption/decryption method for more confidentiality and privacy.}
+  \end{itemize}\vspace{-4pt}
 
-  \projectItem{\faIcon{laptop-code} \href{https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{Anthology of Algorithms and Data structures}}{Aug. 2020 $-$ Present}{ | C++ - Bash/Shell}
-  \begin{itemize}
-    \projectSubItem{Implementing an open source library for Common Code for Competitive Programming in C++.}
-    \projectSubItem{Including Graph Theory, Problem-Solving Paradigms, Mathematics, Computational Geometry, Game Theory, String Processing, Data Structures, more advanced topics and some helpful tools.}
-  \end{itemize}\vspace{-5pt}
+  \project
+  {\faIcon{mosque}}
+  {Next Prayer}{Sep. 2021 $-$ Present}
+  {https://github.com/AbdeltwabMF/nxprayer}{C++ - Python - Bash/Shell - Roff - Docker}
+  {Islamic prayer reminder for Unix status bars.}
 
-  \projectItem{\faIcon{mosque} \href{https://github.com/AbdeltwabMF/nxprayer}{Next Prayer}}{Sep. 2021 $-$ Present}{ | C++ - Python - Bash/Shell - Roff - Docker}
   \begin{itemize}
-    \projectSubItem{Implementing an Islamic prayers reminder and Hijri date for *nix status bars.}
-    \projectSubItem{Maintaining a Docker image for non unix users.}
-    \projectSubItem{Maintaining an AUR package for Arch users.}
-  \end{itemize}\vspace{-5pt}
+    \subproject
+    {Implementing an Islamic prayer reminder for Unix status bars using web API.}
+    \subproject
+    {Maintaining an AUR (Arch-user repository) package and a Docker image for non-Unix users.}
+  \end{itemize}\vspace{-4pt}
+
+  \project
+  {\faIcon{laptop-code}}
+  {Anthology of Algorithms and Data structures}{Aug. 2020 $-$ Present}  {https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{C++ - Bash/Shell}
+  {Common code for competitive programming in C++.}
+
+  \begin{itemize}
+    \subproject
+    {Implementing an open-source library for common code for competitive programming in C++.}
+    \subproject
+    {Including graph theory, problem-solving paradigms, mathematics, data structures, and some helpful tools.}
+  \end{itemize}\vspace{-4pt}
+
+  \project
+  {\faIcon{user-clock}}
+  {Queueing ModelSim}{Dec. 2020}
+  {https://github.com/AbdeltwabMF/Queueing-ModelSim}{Python - Tkinter (GUI)}
+  {Queueing models simulator.}
+
+  \begin{itemize}
+    \subproject
+    {Implemented software for the calculation of characteristics of different queues having the Batch markovian arrival process (BMAP) as an input.}
+    \subproject
+    {Implemented a deterministic queue model using the prefix sum technique, which helped to know the characteristics of the queue at any point in time.}
+  \end{itemize}\vspace{-4pt}
 \end{itemize}
 
 % ---- Technical Skills ---- %
 \section{Technical Skills}
 \begin{itemize}[leftmargin=*]
-  \techSkillItem{Programming Languages}{: C/C++, Python, Java, SQL, \LaTeX{}, Bash/Shell, Solidity, JavaScript, HTML/CSS.}
-  \techSkillItem{Tools \& Technologies}{: GNU/Linux, Git, Make, Emacs, Vim, Next.js, PostgreSQL, Prisma, Hardhat, Ethers.js, Docker, CI/CD.}
+  \technicalskill
+  {\faIcon{code}}{Programming Languages}
+
+  \begin{itemize}
+    \subtechnicalskill
+    {C/C++ \textbar{} Java \textbar{} Python \textbar{} Solidity \textbar{} JavaScript \textbar{} Bash/Shell \textbar{} SQL \textbar{} \LaTeX{} \textbar{} HTML/CSS}
+  \end{itemize}\vspace{-4pt}
+
+  \technicalskill
+  {\faIcon{react}}{Technologies}
+  \begin{itemize}
+    \subtechnicalskill
+    {Next.js \textbar{} PostgreSQL \textbar{} Prisma \textbar{} Hardhat \textbar{} Ethers.js \textbar{} Docker}
+  \end{itemize}\vspace{-4pt}
+
+  \technicalskill
+  {\faIcon{tools}}{Tools}
+  \begin{itemize}
+    \subtechnicalskill
+    {GNU/Linux \textbar{} Git \textbar{} Make \textbar{} Emacs \textbar{} Vim \textbar{} CI/CD}
+  \end{itemize}\vspace{-4pt}
 \end{itemize}
 
 \end{document}
