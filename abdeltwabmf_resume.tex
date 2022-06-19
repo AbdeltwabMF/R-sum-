@@ -91,18 +91,11 @@
   \vspace{-2pt}
 }
 
-\newcommand{\technicalskill}[2] {
+\newcommand{\technicalskill}[3] {
   \vspace{-1pt}
 \item\small
-  #1 \textbf{#2}
+  #1 \textbf{#2 : }{\footnotesize{#3}}
   \vspace{-2pt}
-}
-
-\newcommand{\subtechnicalskill}[1] {
-  \vspace{4pt}
-  \small
-  #1
-  \vspace{-4pt}
 }
 
 \newcommand{\name}[2] {
@@ -139,12 +132,12 @@
   {https://www.linkedin.com/in/abdeltwabmf}
   {\faIcon{linkedin}}
   {RoyalBlue}
-  {AbdeltwabMF}\,
+  {abdeltwabmf}\,
   \contact
   {https://github.com/AbdeltwabMF}
   {\faIcon{github}}
   {RoyalBlue}
-  {AbdeltwabMF}\,
+  {abdeltwabmf}\,
   \contact
   {mailto:abdeltwab.m.fakhry@gmail.com}
   {\faIcon{envelope}}
@@ -197,7 +190,7 @@
   \extracurricularactivity
   {Solved +1000 algorithmic challenges on different online judges.}
   {https://atcoder.jp/users/AbdeltwabMF}{\faIcon{link}}
-  {https://codeforces.com/profile/Satoshi-Nakamoto}{\faIcon{link}}
+  {}{}
 \end{itemize}
 
 % ---- Experience and Volunteering ---- %
@@ -228,11 +221,11 @@
 
   \begin{itemize}
     \subproject
-    {Implementing upgrade-able smart contracts for storing users' files metadata using the proxy pattern.}
-    \subproject
     {Developing a single-page application (SPA) using Next.js for static-site rendering (SSR).}
     \subproject
-    {Using the IPFS p2p network for storing users' files after being encrypted.}
+    {Implementing upgrade-able smart contracts for storing users' files metadata using the proxy pattern.}
+    \subproject
+    {Storing users' files after being encrypted using the IPFS p2p network.}
     \subproject
     {Using client-side encryption/decryption method for more confidentiality and privacy.}
   \end{itemize}\vspace{-4pt}
@@ -240,7 +233,7 @@
   \project
   {\faIcon{mosque}}
   {Next Prayer}{Sep. 2021 $-$ Present}
-  {https://github.com/AbdeltwabMF/nxprayer}{C++ - Python - Bash/Shell - Roff - Docker}
+  {https://github.com/AbdeltwabMF/nxprayer}{C++ - Python - Docker}
   {Islamic prayer reminder for Unix status bars.}
 
   \begin{itemize}
@@ -253,27 +246,27 @@
   \project
   {\faIcon{laptop-code}}
   {Anthology of Algorithms and Data structures}{Aug. 2020 $-$ Present}
-  {https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{C++ - Bash/Shell}
+  {https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{C++}
   {Common code for competitive programming in C++.}
 
   \begin{itemize}
     \subproject
     {Implementing an open-source library for common code for competitive programming in C++.}
     \subproject
-    {Including graph theory, problem-solving paradigms, mathematics, data structures, and some helpful tools.}
+    {Including graph theory, problem-solving paradigms, mathematics, and data structures.}
   \end{itemize}\vspace{-4pt}
 
   \project
   {\faIcon{user-clock}}
   {Queueing ModelSim}{Dec. 2020}
-  {https://github.com/AbdeltwabMF/Queueing-ModelSim}{Python - Tkinter (GUI)}
+  {https://github.com/AbdeltwabMF/Queueing-ModelSim}{Python - Tkinter}
   {Queueing models simulator.}
 
   \begin{itemize}
     \subproject
-    {Implemented software for the calculation of characteristics of different queues having the Batch markovian arrival process (BMAP) as an input.}
+    {Implemented software that calculates the characteristics of queues with the markovian arrival process (MAP).}
     \subproject
-    {Implemented a deterministic queue model using the prefix sum technique, which helped to know the characteristics of the queue at any point in time.}
+    {Implemented a deterministic queue model using the prefix sum to easily identify the characteristics at any time.}
   \end{itemize}\vspace{-4pt}
 \end{itemize}
 
@@ -282,25 +275,15 @@
 \begin{itemize}[leftmargin=*]
   \technicalskill
   {\faIcon{code}}{Programming Languages}
-
-  \begin{itemize}
-    \subtechnicalskill
-    {C/C++ \textbar{} Java \textbar{} Python \textbar{} Solidity \textbar{} JavaScript \textbar{} Bash/Shell \textbar{} SQL \textbar{} \LaTeX{} \textbar{} HTML/CSS}
-  \end{itemize}\vspace{-4pt}
+  {C/C++ \textbar{} Java \textbar{} Python \textbar{} Solidity \textbar{} JavaScript \textbar{} Bash/Shell \textbar{} SQL \textbar{} \LaTeX{} \textbar{} HTML/CSS}
 
   \technicalskill
   {\faIcon{react}}{Technologies}
-  \begin{itemize}
-    \subtechnicalskill
-    {Next.js \textbar{} PostgreSQL \textbar{} Prisma \textbar{} Hardhat \textbar{} Ethers.js \textbar{} Docker}
-  \end{itemize}\vspace{-4pt}
+  {Next.js \textbar{} Node.js \textbar{} PostgreSQL \textbar{} Prisma \textbar{} Hardhat \textbar{} Ethers.js}
 
   \technicalskill
   {\faIcon{tools}}{Tools}
-  \begin{itemize}
-    \subtechnicalskill
-    {GNU/Linux \textbar{} Git \textbar{} Make \textbar{} Emacs \textbar{} Vim \textbar{} CI/CD}
-  \end{itemize}\vspace{-4pt}
+  {GNU/Linux \textbar{} Git \textbar{} Make \textbar{} Emacs \textbar{} Vim \textbar{} Docker \textbar{} Jenkins \textbar{} Agile/Scrum \textbar{} Element}
 \end{itemize}
 
 \end{document}
