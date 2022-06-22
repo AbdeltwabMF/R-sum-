@@ -27,7 +27,7 @@ all:
 	@printf "%b" "$(BYELLOW)Refreshing $(TARGET)...\n$(NC)"
 	pdflatex $(TARGET).tex
 	@printf "%b" "$(BGREEN)Done.\n$(NC)"
-	zathura $(TARGET).pdf
+	# zathura $(TARGET).pdf
 
 clean:
 	@printf "%b" "$(WHITE)Cleaning...\n$(NC)"
