@@ -4,7 +4,7 @@ A single-page, one-column resume for Software Engineers. It uses the base latex 
 
 ## Preview
 
-![RESUME PREVIEW](Resume_Preview.png)
+![RESUME PREVIEW](preview-1.png)
 
 ## Build
 
