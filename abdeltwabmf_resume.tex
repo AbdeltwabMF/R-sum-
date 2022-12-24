@@ -59,11 +59,11 @@
   \vspace{-4pt}
 }
 
-\newcommand{\experience}[7] {
+\newcommand{\experience}[6] {
   \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    #1 \textbf{#2} \href{#4}{\color{RoyalBlue}#5} & #3 \\
-    \textit{\small #6} & \textit{\small #7} \\
+		#1 \href{#2}{\textbf{\color{RoyalBlue}#3}} & #4 \\
+    \textit{\small #5} & \textit{\small #6} \\
   \end{tabular*}
   \vspace{-8pt}
 }
@@ -179,22 +179,21 @@
   {}{}
  \end{itemize}
 
-% ---- Experience and Volunteering ---- %
-% \section{Experience \& Volunteering}
-% \begin{itemize}[leftmargin=*]
-%   \experience
-%   {\faIcon{code}}
-%   {Al-Azhar ICPC Community}{Cairo, Egypt}
-%   {https://sites.google.com/view/azharicpc/home}{{\faIcon{link}}}
-%   {Mentor and Problem-setter}{Feb. 2020 $-$ Present}
+% ---- Experience ---- %
+\section{Experience}
+\begin{itemize}[leftmargin=*]
+  \experience
+	{\faIcon{briefcase}}
+  {https://atomica.ai/}{Atomica AI}{Cairo, Egypt}
+  {Software Engineer}{Nov. 2022 $-$ Present}
 
-%   \begin{itemize}
-%     \subexperience
-%     {Providing multi-level training during the year and writing problems for weekly sheets and contests.}
-%     \subexperience
-%     {Teaching algorithmic topics, data structures, and problem-solving paradigms to +50 participants.}
-%   \end{itemize}\vspace{-4pt}
-% \end{itemize}
+  \begin{itemize}
+    \subexperience
+    {Design, Develop and Test internal applications and tools using C/C++.}
+    \subexperience
+    {Design and Develop user interfaces using Qt, ImGui, and Flutter.}
+  \end{itemize}\vspace{-4pt}
+\end{itemize}
 
 % ---- PROJECTS ---- %
 \section{Selected Projects}
@@ -267,15 +266,15 @@
 \begin{itemize}[leftmargin=*]
   \technicalskill
   {\faIcon{code}}{Languages}
-  {C/C++ \bulletitem{Java} \bulletitem{JavaScript} \bulletitem{Solidity} \bulletitem{Python} \bulletitem{Bash/Shell} \bulletitem{SQL} \bulletitem{\LaTeX{}} \bulletitem{HTML/CSS}}
+	{C/C++ \bulletitem{Java} \bulletitem{JavaScript} \bulletitem{Solidity} \bulletitem{Python} \bulletitem{Bash} \bulletitem{Lua} \bulletitem{SQL} \bulletitem{\LaTeX{}} \bulletitem{HTML/CSS}}
 
   \technicalskill
   {\faIcon{react}}{Technologies}
-  {Next.js \bulletitem{React.js} \bulletitem{Express.js} \bulletitem{Node.js} \bulletitem{Hardhat} \bulletitem{Ethers.js}}
+	{React.js \bulletitem{Node.js} \bulletitem{Flutter} \bulletitem{Qt} \bulletitem{ImGui} \bulletitem{Blockchain/Dapp}}
 
   \technicalskill
   {\faIcon{tools}}{Tools}
-  {GNU/Linux \bulletitem{Git} \bulletitem{Make} \bulletitem{Emacs} \bulletitem{Vim} \bulletitem{Docker} \bulletitem{CI/CD} \bulletitem{Element} \bulletitem{Figma}}
+  {Linux \bulletitem{Git} \bulletitem{Make} \bulletitem{Docker} \bulletitem{Emacs} \bulletitem{CI/CD} \bulletitem{Figma}}
 \end{itemize}
 
 \end{document}
