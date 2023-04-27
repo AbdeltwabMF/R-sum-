@@ -43,25 +43,26 @@
 \pdfgentounicode=1
 
 %% ----- Custom Commands Start ----- %%
-\newcommand{\education}[5] {
-  \vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    #1 \textbf{#2} & #3 \\
-    \textit{\small #4} & \textit{\small #5} \\
+\newcommand{\education}[6] {
+	\vspace{-1pt}\item[]
+  \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		#1 \href{#2}{\textbf{\color{RoyalBlue}#3}} & #4 \\
+    \textit{\small #5} & \textit{\small #6} \\
   \end{tabular*}
   \vspace{-4pt}
 }
 
 \newcommand{\extracurricularactivity}[3] {
-\item\small
-  {#1}
-  \href{#2}{\color{RoyalBlue}#3}
+	\vspace{1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		#1 & \href{#2}{\color{RoyalBlue}#3} \\
+  \end{tabular*}
   \vspace{-4pt}
 }
 
 \newcommand{\experience}[6] {
-  \vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	\vspace{-1pt}\item[]
+  \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		#1 \href{#2}{\textbf{\color{RoyalBlue}#3}} & #4 \\
     \textit{\small #5} & \textit{\small #6} \\
   \end{tabular*}
@@ -75,11 +76,11 @@
 }
 
 \newcommand{\project}[7] {
-  \vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
+	\vspace{-1pt}\item[]
+  \begin{tabular*}{1\textwidth}[t]{ll@{\extracolsep{\fill}}r}
     #1 \href{#4}{\textbf{\color{RoyalBlue}#2}}
     \textbar{} \textit{\small#5} \textbar{ } & \textit{\footnotesize#7} & \textit{\small #3} \\
-    \vspace{-10pt}
+    \vspace{-8pt}
   \end{tabular*}
   \textit{\small #6}
   \vspace{-8pt}
@@ -102,7 +103,7 @@
   \textbf{
     \href{#1}{\Huge{#2}}
   }
-  \vspace{-8pt}
+  \vspace{-4pt}
 }
 
 \newcommand{\contact}[4] {
@@ -144,11 +145,12 @@
 
 % ---- Education ---- %
 \section{Education}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=0pt]
   \education
   {\faIcon{university}}
+	{https://eng-azhar.net/}
   {Faculty of Engineering, Al-Azhar University}{ Cairo, Egypt}
-  {Bachelor of Science (BSc) in Computers and Systems Engineering; GPA: 3.2 (B)}{ Sep. 2017 $-$ Aug. 2022}
+  {Bachelor of Science (BSc) in Computers and Systems Engineering.}{Sep. 2017 $-$ Aug. 2022}
 \end{itemize}
 
 % ---- Competitive Programming ---- %
@@ -167,97 +169,92 @@
   {}{}
 
   \extracurricularactivity
-  {Teaching algorithmic topics, data structures, and problem-solving paradigms to +50 participants.}
+  {Taught algorithmic topics, data structures, and problem-solving paradigms to over 50 participants.}
   {https://sites.google.com/view/azharicpc/home}{\faIcon{link}}
 
   \extracurricularactivity
-  {Providing multi-level training during the year and writing problems for weekly sheets and contests.}
+  {Offered training at various levels and composed problems for weekly practice sheets and competitions.}
   {}{}
 
   \extracurricularactivity
-  {Solved +1000 algorithmic challenges on different online judges.}
+  {Successfully tackled over 1000 algorithmic challenges on various online judging platforms.}
   {}{}
  \end{itemize}
 
 % ---- Experience ---- %
 \section{Experience}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=0pt]
   \experience
 	{\faIcon{briefcase}}
   {https://atomica.ai/}{Atomica AI}{Cairo, Egypt}
-  {Software Engineer}{Nov. 2022 $-$ Present}
+  {Software Engineer II}{Nov. 2022 $-$ Present}
 
   \begin{itemize}
     \subexperience
-    {Design, Develop and Test internal applications and tools using C/C++.}
+    {Developing various internal tools with varying degrees of complexity that cater to the specific needs of each team, improving their workflow, boosting their capabilities, and simplifying their tasks.}
     \subexperience
-    {Design and Develop user interfaces using Qt, ImGui, and Flutter.}
+    {Utilizing C/C++, Qt/QML, CMake, and Git to construct and manage the tools.}
   \end{itemize}\vspace{-4pt}
 \end{itemize}
 
 % ---- PROJECTS ---- %
 \section{Selected Projects}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=0pt]
+  \project
+  {\faIcon{bell}}
+  {Loc}{Jan. 2023 $-$ Present}
+  {https://github.com/AbdeltwabMF/loc/releases/latest}{Flutter}
+  {Free and open-source location-based reminder for Android.}{Android}
+
+  \begin{itemize}
+    \subproject
+    {Developing "Loc," an Android application that provides over 10 features, including setting multiple reminders, saving favorite places, showing distance, providing customizable reminders, and supporting offline and online navigation with live location tracking and sound reminders.}
+  \end{itemize}\vspace{-4pt}
+
   \project
   {\faIcon{cloud}}
   {Devault}{Apr. 2022 $-$ Present}
   {https://devault.vercel.app/}{Next.js - Hardhat - Ethers.js - Docker}
-  {A Blockchain-based, decentralized, and end-to-end encrypted cloud storage.}{Web app.}
+  {A Blockchain-based, decentralized, and end-to-end encrypted cloud storage.}{dApp}
 
   \begin{itemize}
     \subproject
-    {Developing a single-page application (SPA) using Next.js for static-site rendering (SSR).}
+    {Designed a decentralized application (dApp) using Next.js and Solidity. The dApp is integrated with multiple cryptocurrency wallets, such as Metamask, to provide users with the ability to login to "Devault".}
     \subproject
-    {Logging into the decentralized vault (devault) using a crypto wallet (e.g. Metamask).}
-    \subproject
-    {Implementing upgrade-able smart contracts as a distributed and public database using the proxy pattern.}
-    \subproject
-    {Encrypting, splitting, and distributing the actual encrypted files on the InterPlanetry File System (IPFS) Network.}
-    \subproject
-    {Using the client-side encryption/decryption method for more confidentiality and privacy.}
+    {Using a smart contract as a public database and utilizing the InterPlanetary File System (IPFS) network and client-side encryption/decryption techniques to securely store and retrieve files.}
   \end{itemize}\vspace{-4pt}
 
   \project
   {\faIcon{mosque}}
   {Next Prayer}{Sep. 2021 $-$ Present}
-  {https://github.com/AbdeltwabMF/nxprayer}{C++ - Python - Docker}
-  {Islamic prayer reminder for Unix status bars.}{Command-line tool}
+  {https://github.com/AbdeltwabMF/next-prayer}{C/C++ - CMake - Roff}
+  {Islamic prayer notifier for Unix status bars.}{CLI}
 
   \begin{itemize}
     \subproject
-    {Using web APIs to fetch the timings for one year and caching them locally to query them off-line.}
-    \subproject
-    {Sending a notification when the time of adhan comes and showing the next prayer and its time in the status bar.}
-    \subproject
-    {Providing a config file for the users to set their preferences and the parameters used by the API.}
-    \subproject
-    {Maintaining a Docker image and an Arch-user repository (AUR) package.}
+    {Creating "next-prayer," a software that utilizes web APIs to obtain one year of prayer timings, caches them locally for offline access, sends adhan notifications, displays the next prayer and its time in the status bar, and allows users to configure their preferences through a configuration file.}
   \end{itemize}\vspace{-4pt}
+
+  % \project
+  % {\faIcon{user-clock}}
+  % {Queueing ModelSim}{Dec. 2020}
+  % {https://github.com/AbdeltwabMF/queueing-modelsim}{Python}
+  % {Queueing models simulator.}{GUI}
+  %
+  % \begin{itemize}
+  %   \subproject
+  %   {Created "Queueing ModelSim" software to analyze queues w/ mathematical models: Markovian Arrival Process \& deterministic model using prefix sum.}
+  % \end{itemize}\vspace{-4pt}
 
   \project
   {\faIcon{laptop-code}}
   {Anthology of Algorithms and Data structures}{Aug. 2020 $-$ Present}
-  {https://github.com/AbdeltwabMF/Anthology-of-Algorithms-and-Data-structures}{C++}
-  {Common code for competitive programming in C++.}{Library}
+  {https://github.com/AbdeltwabMF/anthology-of-algorithms-and-data-structures}{C++}
+  {Common code for competitive programming in C++.}{library}
 
   \begin{itemize}
     \subproject
-    {Implementing an open-source library for common code for competitive programming in C++.}
-    \subproject
-    {Including graph theory, problem-solving paradigms, mathematics, and data structures.}
-  \end{itemize}\vspace{-4pt}
-
-  \project
-  {\faIcon{user-clock}}
-  {Queueing ModelSim}{Dec. 2020}
-  {https://github.com/AbdeltwabMF/Queueing-ModelSim}{Python}
-  {Queueing models simulator.}{Desktop app.}
-
-  \begin{itemize}
-    \subproject
-    {Implemented software that calculates the characteristics of queues with the markovian arrival process (MAP).}
-    \subproject
-    {Implemented a deterministic queue model using the prefix sum to easily identify the characteristics at any time.}
+    {Writing a comprehensive C++ library for competitive programming that covers more than 8 topics, including graph theory, mathematics, problem-solving paradigms, and data structures.}
   \end{itemize}\vspace{-4pt}
 \end{itemize}
 
@@ -266,15 +263,23 @@
 \begin{itemize}[leftmargin=*]
   \technicalskill
   {\faIcon{code}}{Languages}
-	{C/C++ \bulletitem{Java} \bulletitem{JavaScript} \bulletitem{Solidity} \bulletitem{Python} \bulletitem{Bash} \bulletitem{Lua} \bulletitem{SQL} \bulletitem{\LaTeX{}} \bulletitem{HTML/CSS}}
+	{C/C++ \bulletitem{Java} \bulletitem{Go} \bulletitem{JavaScript} \bulletitem{Solidity} \bulletitem{Python} \bulletitem{Bash} \bulletitem{Lua} \bulletitem{SQL} \bulletitem{\LaTeX{}} \bulletitem{HTML/CSS}}
 
   \technicalskill
   {\faIcon{react}}{Technologies}
-	{React.js \bulletitem{Node.js} \bulletitem{Flutter} \bulletitem{Qt} \bulletitem{ImGui} \bulletitem{Blockchain/Dapp}}
+	{React.js \bulletitem{Node.js} \bulletitem{Flutter} \bulletitem{Qt/QML} \bulletitem{Blockchain}}
 
   \technicalskill
   {\faIcon{tools}}{Tools}
-  {Linux \bulletitem{Git} \bulletitem{Make} \bulletitem{Docker} \bulletitem{Emacs} \bulletitem{CI/CD} \bulletitem{Figma}}
+  {Linux \bulletitem{Git} \bulletitem{Make/CMake} \bulletitem{Docker} \bulletitem{Emacs} \bulletitem{CI/CD} \bulletitem{Figma}}
 \end{itemize}
+
+\vspace{-25pt}
+\begin{flushright}
+	\texttt{\tiny 
+		\color{Green}
+		Last updated on \today
+	}
+\end{flushright}
 
 \end{document}
