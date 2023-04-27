@@ -94,8 +94,8 @@
 
 \newcommand{\technicalskill}[3] {
   \vspace{-1pt}
-\item\small
-  #1 \textbf{#2 : }{\footnotesize{#3}}
+	\item[]\small
+  #1 \textbf{#2: }{\footnotesize{#3}}
   \vspace{-2pt}
 }
 
@@ -153,6 +153,20 @@
   {Bachelor of Science (BSc) in Computers and Systems Engineering.}{Sep. 2017 $-$ Aug. 2022}
 \end{itemize}
 
+% ---- Experience ---- %
+\section{Experience}
+\begin{itemize}[leftmargin=0pt]
+  \experience
+	{\faIcon{briefcase}}
+  {https://atomica.ai/}{Atomica AI}{Cairo, Egypt}
+  {Software Engineer II}{Nov. 2022 $-$ Present}
+
+  \begin{itemize}
+    \subexperience
+    {Developing various internal tools with varying degrees of complexity that cater to the specific needs of each team, improving their workflow, boosting their capabilities, and simplifying their tasks. C/C++, Qt/QML, CMake, and Git are being utilized to construct and manage the tools.}
+  \end{itemize}\vspace{-4pt}
+\end{itemize}
+
 % ---- Competitive Programming ---- %
 \section{Extra-curricular Activities}
 \begin{itemize}[leftmargin=*]
@@ -181,22 +195,6 @@
   {}{}
  \end{itemize}
 
-% ---- Experience ---- %
-\section{Experience}
-\begin{itemize}[leftmargin=0pt]
-  \experience
-	{\faIcon{briefcase}}
-  {https://atomica.ai/}{Atomica AI}{Cairo, Egypt}
-  {Software Engineer II}{Nov. 2022 $-$ Present}
-
-  \begin{itemize}
-    \subexperience
-    {Developing various internal tools with varying degrees of complexity that cater to the specific needs of each team, improving their workflow, boosting their capabilities, and simplifying their tasks.}
-    \subexperience
-    {Utilizing C/C++, Qt/QML, CMake, and Git to construct and manage the tools.}
-  \end{itemize}\vspace{-4pt}
-\end{itemize}
-
 % ---- PROJECTS ---- %
 \section{Selected Projects}
 \begin{itemize}[leftmargin=0pt]
@@ -208,26 +206,24 @@
 
   \begin{itemize}
     \subproject
-    {Developing "Loc," an Android application that provides over 10 features, including setting multiple reminders, saving favorite places, showing distance, providing customizable reminders, and supporting offline and online navigation with live location tracking and sound reminders.}
+    {Developing "Loc," a reminder app that utilizes Open Street Map and enables users to set multiple reminders with customizable radius, notes, and actions. The app delivers an audible alert upon arrival. In addition, "Loc" offers various features such as a dark/light theme, offline/online usage, live location display, and persistent data storage.}
   \end{itemize}\vspace{-4pt}
 
   \project
   {\faIcon{cloud}}
-  {Devault}{Apr. 2022 $-$ Present}
-  {https://devault.vercel.app/}{Next.js - Hardhat - Ethers.js - Docker}
+  {Devault}{Apr. 2022 $-$ Jul. 2022}
+  {https://devault.vercel.app/}{Next.js - Hardhat - Docker}
   {A Blockchain-based, decentralized, and end-to-end encrypted cloud storage.}{dApp}
 
   \begin{itemize}
     \subproject
-    {Designed a decentralized application (dApp) using Next.js and Solidity. The dApp is integrated with multiple cryptocurrency wallets, such as Metamask, to provide users with the ability to login to "Devault".}
-    \subproject
-    {Using a smart contract as a public database and utilizing the InterPlanetary File System (IPFS) network and client-side encryption/decryption techniques to securely store and retrieve files.}
+    {Designed a decentralized application (dApp) called "Devault" with Next.js and Solidity, integrated with various cryptocurrency wallets like Metamask for user login. The dApp uses a smart contract as a public database and securely stores/retrieves files using IPFS network and client-side encryption/decryption techniques.}
   \end{itemize}\vspace{-4pt}
 
   \project
   {\faIcon{mosque}}
   {Next Prayer}{Sep. 2021 $-$ Present}
-  {https://github.com/AbdeltwabMF/next-prayer}{C/C++ - CMake - Roff}
+  {https://github.com/AbdeltwabMF/next-prayer}{C/C++ - CMake}
   {Islamic prayer notifier for Unix status bars.}{CLI}
 
   \begin{itemize}
@@ -254,16 +250,16 @@
 
   \begin{itemize}
     \subproject
-    {Writing a comprehensive C++ library for competitive programming that covers more than 8 topics, including graph theory, mathematics, problem-solving paradigms, and data structures.}
+    {Writing a C++ library for competitive programming that extensively covers over 6 topics, such as graph theory, mathematics, geometry, problem-solving paradigms, string processing, and data structures. The code is accompanied by comments that provide an overview of its space and time complexity.}
   \end{itemize}\vspace{-4pt}
 \end{itemize}
 
 % ---- Technical Skills ---- %
 \section{Technical Skills}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=0pt]
   \technicalskill
   {\faIcon{code}}{Languages}
-	{C/C++ \bulletitem{Java} \bulletitem{Go} \bulletitem{JavaScript} \bulletitem{Solidity} \bulletitem{Python} \bulletitem{Bash} \bulletitem{Lua} \bulletitem{SQL} \bulletitem{\LaTeX{}} \bulletitem{HTML/CSS}}
+	{C/C++ \bulletitem{Java} \bulletitem{Python} \bulletitem{Go} \bulletitem{JavaScript} \bulletitem{Solidity} \bulletitem{Bash} \bulletitem{Lua} \bulletitem{SQL} \bulletitem{\LaTeX{}} \bulletitem{HTML/CSS}}
 
   \technicalskill
   {\faIcon{react}}{Technologies}
@@ -271,7 +267,7 @@
 
   \technicalskill
   {\faIcon{tools}}{Tools}
-  {Linux \bulletitem{Git} \bulletitem{Make/CMake} \bulletitem{Docker} \bulletitem{Emacs} \bulletitem{CI/CD} \bulletitem{Figma}}
+  {Linux \bulletitem{Emacs} \bulletitem{Git} \bulletitem{CMake} \bulletitem{Docker} \bulletitem{CI/CD} \bulletitem{Figma}}
 \end{itemize}
 
 \vspace{-25pt}
